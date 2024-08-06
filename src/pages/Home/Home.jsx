@@ -46,7 +46,7 @@ const Home = () => {
           <input onChange={inputHandler} list='coinlist' value={input} type="text" placeholder='Search crypto..' required />
           {/* list property lists out the options of datalist coinlist from the map below */}
           <datalist id='coinlist'>
-            {allCoin.map((item, index) => (<option key={index} value={item.name}/>) )}
+            {Array.isArray(allCoin) && allCoin.map((item, index) => (<option key={index} value={item.name}/>))}
           </datalist>
 
 
